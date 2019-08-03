@@ -28,7 +28,7 @@ export default function DualInfoblock({ heading, img }) {
               <img
                 className="card-img-top"
                 src={img}
-                alt="image goes here"
+                alt="card"
               />
               <div className="card-body">
                 <h5 className="card-title text-success">Just click photos</h5>

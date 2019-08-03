@@ -3,9 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import HeroSection from "../components/Reusable/HeroSection"
-import Infoblock from "../components/Reusable/Infoblock";
 import DualInfoblock from "../components/Reusable/DualInfoblock";
-import Teamphotosection from "../components/About/Teamphotosection";
 import Coursecart from "../components/Cart/Coursecart";
 
 const AboutPage = ({ data }) => (
