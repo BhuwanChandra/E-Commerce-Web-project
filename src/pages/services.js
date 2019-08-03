@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 import HeroSection from "../components/Reusable/HeroSection"
 import DualInfoblock from "../components/Reusable/DualInfoblock";
 import Coursecart from "../components/Cart/Coursecart";
+import Bundlecart from "../components/Cart/Bundlecart";
 
 const AboutPage = ({ data }) => (
     <Layout>
@@ -22,6 +23,13 @@ const AboutPage = ({ data }) => (
             }
         />
     <Coursecart courses={data.courses}/>
+    <DualInfoblock
+      heading="Bundle Courses"
+      img={
+        "https://images.pexels.com/photos/1092426/pexels-photo-1092426.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      }
+    />
+    <Bundlecart bundles={data.bundles} />
     </Layout>
 )
 
@@ -39,6 +47,7 @@ export const query = graphql`
                node {
                  id
                  title
+                 category
                  price
                  image {
                    fixed(width: 200, height: 120) {
@@ -51,6 +60,20 @@ export const query = graphql`
                }
              }
            }
+           bundles: allContentfulBundles {
+             edges {
+               node {
+                 id
+                 title
+                 price
+                 image {
+                   fixed(width: 200, height: 120) {
+                     ...GatsbyContentfulFixed_tracedSVG
+                   }
+                 }
+               }
+             }
+            }
          }
        `
 
