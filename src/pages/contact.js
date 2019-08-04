@@ -7,17 +7,17 @@ import Infoblock from "../components/Reusable/Infoblock"
 import Contact from "../components/Contact/contact"
 
 const ContactPage = ({ data }) => (
-    <Layout>
-        <SEO title="Home" />
-        <HeroSection
-            img={data.img.childImageSharp.fluid}
-            title="Contact Us"
-            subtitle=""
-            heroclass="about-background"
-        />
-        <Infoblock heading="How can we help" />
-        <Contact />
-    </Layout>
+  <Layout>
+    <SEO title="Home" />
+    <HeroSection
+      img={data.img.childImageSharp.fluid}
+      title="Contact Us"
+      subtitle=""
+      heroclass="about-background"
+    />
+    <Infoblock heading="How can we help" />
+    <Contact />
+  </Layout>
 )
 
 export const query = graphql`
