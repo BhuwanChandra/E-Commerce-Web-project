@@ -2,6 +2,10 @@
   background-color: #8c7ae6;
 }
 
+body{
+  overflow-x: hidden;
+}
+
 .cart-icon{
   font-size: 2rem;
 }

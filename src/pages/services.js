@@ -4,10 +4,9 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import HeroSection from "../components/Reusable/HeroSection"
 import DualInfoblock from "../components/Reusable/DualInfoblock";
-import Coursecart from "../components/Cart/Coursecart";
-import Bundlecart from "../components/Cart/Bundlecart";
+import Services from "../components/Services/services";
 
-const AboutPage = ({ data }) => (
+const ServicesPage = ({ data }) => (
     <Layout>
         <SEO title="Home" />
         <HeroSection
@@ -22,14 +21,10 @@ const AboutPage = ({ data }) => (
                 "https://images.pexels.com/photos/1092426/pexels-photo-1092426.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
             }
         />
-    <Coursecart courses={data.courses}/>
-    <DualInfoblock
-      heading="Bundle Courses"
-      img={
-        "https://images.pexels.com/photos/1092426/pexels-photo-1092426.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-      }
-    />
-    <Bundlecart bundles={data.bundles} />
+        <Services
+        courses={data.courses}
+        bundles={data.bundles}
+        />
     </Layout>
 )
 
@@ -77,4 +72,4 @@ export const query = graphql`
          }
        `
 
-export default AboutPage
+export default ServicesPage
