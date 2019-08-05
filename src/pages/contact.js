@@ -6,12 +6,12 @@ import HeroSection from "../components/Reusable/HeroSection"
 import Infoblock from "../components/Reusable/Infoblock"
 import Contact from "../components/Contact/contact"
 
-const ContactPage = ({ data }) => (
+const ContactPage = ({data}) => (
   <Layout>
     <SEO title="Home" />
     <HeroSection
       img={data.img.childImageSharp.fluid}
-      title="Contact Us"
+      title="contact us"
       subtitle=""
       heroclass="about-background"
     />
