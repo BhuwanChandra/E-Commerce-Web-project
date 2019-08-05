@@ -22,7 +22,7 @@ export default function Footer() {
             </div>
             <div className="col-md-4">
               <hr className="light" />
-              <h5>Our Hours</h5>
+              <h5>Office Hours</h5>
               <hr className="light" />
               <p>Monday: 9am - 5pm</p>
               <p>Saturday: 10am - 4pm</p>

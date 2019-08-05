@@ -22,8 +22,8 @@ const AboutPage = ({ data }) => (
         "https://images.pexels.com/photos/1092426/pexels-photo-1092426.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
       }
     />
-    <Infoblock heading="About Vision" />
-    <Teamphotosection/>
+    <Teamphotosection />
+    <Infoblock heading="Our Vision" />
   </Layout>
 )
 
