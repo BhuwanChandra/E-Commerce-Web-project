@@ -29,24 +29,6 @@ export const query = graphql`
         }
       }
     }
-    courses: allContentfulCourses {
-      edges {
-        node {
-          id
-          title
-          price
-          category
-          image {
-            fixed(width: 200, height: 120) {
-              ...GatsbyContentfulFixed_tracedSVG
-            }
-          }
-          description {
-            description
-          }
-        }
-      }
-    }
   }
 `
 
