@@ -12,7 +12,7 @@ const AboutPage = ({ data }) => (
     <SEO title="Home" />
     <HeroSection
       img={data.img.childImageSharp.fluid}
-      title="About LearnCodeOnline"
+      title="About LearnToCode"
       subtitle=""
       heroclass="about-background"
     />

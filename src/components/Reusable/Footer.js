@@ -16,7 +16,7 @@ export default function Footer() {
               </Link>
               <hr className="light" />
               <p>555-555-5555</p>
-              <p>office@learncodeonline.in</p>
+              <p>office@learntocode.org</p>
               <p>100 Street Name</p>
               <p>City, State, 00000</p>
             </div>
@@ -40,7 +40,7 @@ export default function Footer() {
             <div className="col-12">
               <hr className="light-100" />
               <br/>
-              <h5>learncodeonline.in &copy; 2019</h5>
+              <h5>learntocode.org &copy; 2019</h5>
             </div>
           </div>
         </div>

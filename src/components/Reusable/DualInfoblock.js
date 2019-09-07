@@ -31,7 +31,7 @@ export default function DualInfoblock({ heading, img }) {
                 alt="card"
               />
               <div className="card-body">
-                <h5 className="card-title text-success">Just click photos</h5>
+                <h5 className="card-title text-warning">{heading} : </h5>
                 <p className="card-text text-white">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Illum provident maxime eaque temporibus ab corrupti sed
