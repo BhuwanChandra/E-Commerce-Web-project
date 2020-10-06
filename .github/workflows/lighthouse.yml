@@ -1,20 +1,30 @@
-name: CI
-on: [push]
+name: Lighthouse CI
+on: pull_request
 jobs:
-  lhci:
-    name: Lighthouse
+  build:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js 10.x
+      - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
-          node-version: 10.x
-      - name: npm install, build
+          node-version: 12.x
+      - name: Install & Build
         run: |
-          npm install
-          npm run build
-      - name: run Lighthouse CI
-        run: |
-          npm install -g @lhci/cli@0.4.x
-          lhci autorun
+          yarn install
+          yarn build
+      - name: Wait for the Netlify Preview
+        uses: jakepartusch/wait-for-netlify-action@v1
+        id: netlify
+        with:
+          site_name: 'rg-lco'
+      - name: Audit URLs using Lighthouse
+        uses: treosh/lighthouse-ci-action@v3
+        with:
+          urls: |
+            ${{ steps.netlify.outputs.url }}
+            ${{ steps.netlify.outputs.url }}/services/
+            ${{ steps.netlify.outputs.url }}/about/
+            ${{ steps.netlify.outputs.url }}/contact/
+          uploadArtifacts: true
