@@ -33,7 +33,7 @@ export const query = graphql`
            img: file(relativePath: { eq: "services.png" }) {
              childImageSharp {
                fluid(maxWidth: 400, maxHeight: 250) {
-                 ...GatsbyImageSharpFluid_tracedSVG
+                 ...GatsbyImageSharpFluid
                }
              }
            }
@@ -46,7 +46,7 @@ export const query = graphql`
                  price
                  image {
                    fixed(width: 200, height: 120) {
-                     ...GatsbyContentfulFixed_tracedSVG
+                     ...GatsbyContentfulFluid
                    }
                  }
                  description {
@@ -63,12 +63,12 @@ export const query = graphql`
                  price
                  image {
                    fixed(width: 200, height: 120) {
-                     ...GatsbyContentfulFixed_tracedSVG
+                     ...GatsbyContentfulFluid
                    }
                  }
                }
              }
-            }
+           }
          }
        `
 
